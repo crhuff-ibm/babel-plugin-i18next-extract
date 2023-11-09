@@ -27,6 +27,7 @@ export interface Config {
   customTransComponents: readonly [string, string][];
   customUseTranslationHooks: readonly [string, string][];
   excludes: readonly string[];
+  skipPlurals: boolean;
 
   // private cache
   cache: {
@@ -123,5 +124,6 @@ export function parseConfig(opts: Partial<Config>): Config {
         ],
       ),
     },
+    skipPlurals: coalesce(opts.skipPlurals, false),
   };
 }

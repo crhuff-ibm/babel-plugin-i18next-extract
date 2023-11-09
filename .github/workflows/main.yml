@@ -58,5 +58,5 @@ jobs:
       - run: yarn run build
       - uses: actions/upload-artifact@v3
         with:
-          name: babel-plugin-i18next-extract
+          name: babel-plugin-i18next-extract-crhuff-ibm
           path: lib/

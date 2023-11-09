@@ -1,7 +1,9 @@
+import { readFileSync } from 'fs';
+
 import { babel } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
-import pkg from './package.json' assert { type: 'json' };
+const pkg = JSON.parse(readFileSync('package.json', { encoding: 'utf8' }));
 
 const extensions = ['.js', '.ts'];
 

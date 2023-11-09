@@ -122,7 +122,7 @@ export function computeDerivedKeys(
     });
   }
 
-  if (parsedOptions.hasCount) {
+  if (parsedOptions.hasCount && !config.skipPlurals) {
     const i18n = i18next.createInstance({
       pluralSeparator: config.pluralSeparator,
       // i18next doesn't allow passing "v4" as it's not "compat" mode.
